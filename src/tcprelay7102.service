@@ -1,0 +1,10 @@
+[Unit]
+Description=Relay tcp packets received on port 7102
+
+[Service]
+ExecStart=/tcprelay.py --port 7102
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

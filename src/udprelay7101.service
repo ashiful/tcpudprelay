@@ -1,0 +1,10 @@
+[Unit]
+Description=Relay upp packets received on port 7101
+
+[Service]
+ExecStart=/udprelay.py --port 7101
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target
